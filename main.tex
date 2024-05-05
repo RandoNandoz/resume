@@ -1,0 +1,221 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+  \textbf{\Huge \scshape Randy Zhu} \\ \vspace{1pt}
+  \small 604-704-9500 $|$ \href{mailto:randyzhu@student.ubc.ca}{\underline{randyzhu@student.ubc.ca}} $|$
+  \href{https://www.linkedin.com/in/rzhu08/}{{linkedin.com/in/rzhu08}} $|$
+  \href{https://github.com/RandoNandoz}{\underline{github.com/RandoNandoz}}
+\end{center}
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{Languages}{: Java, C\#, Python, C/C++, HTML/CSS, TypeScript, Racket/Scheme} \\
+        \textbf{Frameworks}{: JUnit, Unity, Swing, JavaFX, Android, Flask} \\
+        \textbf{Developer Tools}{: Git, Docker, Azure, CloudFlare, Linux, Interactive Disassembler, Cisco Wireless} \\
+        \textbf{Libraries}{: Sympy, Numpy, Pandas, Matplotlib, MongoDB}
+        }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Barista/Cashier}{Aug. 2021 -- Aug. 2022}
+{Waves Coffee House}{Burnaby, BC}
+\resumeItemListStart
+\resumeItem{Efficiently handled high customer volume, maintained sanitation, and resolved technical issues in a fast-paced cafe.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\section{Volunteer}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Automation Developer}{Sep. 2023 -- Present}
+{UBC Agroponics}{Vancouver, BC}
+\resumeItemListStart
+\resumeItem{Orchestrated the deployment of farming automation web applications using Docker, accelerating the development lifecycle and improved scalablity.}
+\resumeItem{Visualized and stored sensor data transmitted using MQTT into Postgres, ensuring efficent data storage.}
+\resumeItem{Delivering 90\% cost savings by transitioning team from paid, proprietary software to free/open-source solutions.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{Collidy Road} $|$ \emph{Unity, C\#}}{July 2023}
+\resumeItemListStart
+\resumeItem{Lead developer for a top 10\% of submissions game jam project, a role-reversal of Crossy Road}
+\resumeItem{Optimized particle FX and entity behaviour to support massive enemy count.}
+\resumeItem{Collaborated with several artists and developers over multiple days to avoid work overlap and streamline work.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Decisions Bot} $|$ \emph{Discord API, MongoDB, Python, Docker, Git}}{March 2023}
+\resumeItemListStart
+\resumeItem{Developed a Discord bot to track applicants' admissions decisions.}
+\resumeItem{Employed MongoDB to track decisions, and user calls to the bot to provide more reliable data warehousing.}
+\resumeItem{Collaborated with end users to suggest features and feedback on the bot's behaviour.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{StudyBuddy} $|$ \emph{Firebase, Flask, OpenAI API, HTML, Python}}{June 2023 -- Present}
+\resumeItemListStart
+\resumeItem{Currently working on smart scheduling and studying tracking webapp.}
+% \resumeItem{Working with OpenAI API to solve schedule constraint problems}
+\resumeItem{Leveraged OpenAI API to solve schedule constraint problems, leading to smarter, better schedules.}
+\resumeItem{Used Flask and Firebase to rapidly facilitate OAuth2 based authentication the end user.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Plantis} $|$ \emph{Typescript, React, Firebase, HTML}}{January 2023}
+\resumeItemListStart
+\resumeItem{Plant watering tracker/reminder app for nwHacks 2023}
+\resumeItem{Architected solution to storing plant data into Cloud Firestore, a NoSQL database solution}
+\resumeItem{Implementated authentication using Firebase}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Bestiebot} $|$ \emph{Reddit API, MongoDB, Gephi, Python}}{Sept 2022}
+\resumeItemListStart
+\resumeItem{Reddit bot used to track user interactions on forum to display user-focused data about each user's behaviour.}
+\resumeItem{Using Gephi, a software for network analysis and visualization, displayed stunning visualizations of user data.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Discord Music Bot} $|$ \emph{Spotify API, Discord API, Lavalink, Python}}{Jan 2021}
+\resumeItemListStart
+\resumeItem{Music bot for Discord written for primarily pedagogical purposes to educate students.}
+\resumeItem{Implemented a feature allows users to translate Spotify playlists using the Spotify API into YouTube format, allowing the bot to play users' playlists.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of British Columbia}{Vancouver, BC}
+{BSc, Computer Science}{Sep. 2023 -- Present}
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
