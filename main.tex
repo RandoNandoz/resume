@@ -26,7 +26,7 @@
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -122,8 +122,8 @@
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{University of British Columbia}{GPA: 90\%}
-{BSc, Computer Science, Minor in Mathematics}{2023 -- 2027}
+{University of British Columbia}{GPA: 88\%}
+{BSc, Computer Science}{2023 -- 2028}
 \resumeSubHeadingListEnd
 
 %
@@ -131,11 +131,10 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Java, C\#, Python, C/C++, HTML/CSS, TypeScript, Racket/Scheme} \\
-        \textbf{Frameworks}{: JUnit, Unity, Swing, JavaFX, Android, Flask} \\
-        \textbf{Developer Tools}{: Git, Docker, Azure, CloudFlare, Linux, Interactive Disassembler, Cisco Wireless, Hyper-V, VMware ESXi, gdb/lldb, Valgrind Memcheck} \\
-        \textbf{Libraries}{: Sympy, Numpy, Pandas, Matplotlib, MongoDB, jQuery, Catch}
-        }}
+        \textbf{Languages}{: Java, C\#, Python, C, C++, JavaScript, TypeScript} \\
+        % \textbf{Frameworks}{: JUnit, Unity, NUnit, Swing, Flask,} \\
+        \textbf{Developer Tools}{: Git, Docker, Azure, CloudFlare, Linux, Interactive Disassembler, Cisco Wireless, Hyper-V, VMware ESXi, gdb, lldb, Valgrind Memcheck, Excel} \\
+        \textbf{Libraries}{: Sympy, Numpy, Pandas, Matplotlib, MongoDB, jQuery, Catch, Flask, Swing/Java AWT, NUnit, JUnit, Unity, Boost Graph Library, Power Apps Component Framework}}}
 \end{itemize}
 
 
@@ -143,26 +142,41 @@
 \section{Work Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
-{Power Platform Developer Co-op}{September 2024 -- April 2025}
-{Teck Resources}{Vancouver, BC}
-% \resumeItemListStart
-% \resumeItem{}
-% \resumeItemListEnd
 
 \resumeSubheading
-{Undergraduate Teaching Assistant}{July 2024 -- September 2024}
+{Research Assistant (NSERC Undergraduate Student Research Award)}{May 2025 -- August 2025}
+{Software Practices Lab (UBC Computer Science)}{Vancouver, BC}
+\resumeItemListStart
+\resumeItem{Under the supervision of Dr. Caroline Lemieux, I will be improving a tool to create unit tests from exploratory tests.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Power Platform Developer Co-op}{September 2024 -- April 2025}
+{Teck Resources Limited}{Vancouver, BC}
+\resumeItemListStart
+\resumeItem{Developed React photo viewer plugin with Typescript and Power Apps Component Framework}
+\resumeItem{Performed automated testing of Power Apps UIs using Dataverse API and Puppeteer in C\#}
+\resumeItem{Transitioned legacy Excel spreadsheets to Power App solutions using Pandas and Python, converting data and accelerating ETL pipelines for business analysis teams.}
+\resumeItem{Architected efficient relational database schemas in Microsoft Dataverse.}
+\resumeItem{Developed manual test plans in Excel, catching 85\% of bugs before deployment.}
+\resumeItem{Wrote clean, event-driven functional Power FX code for UI and database interaction.}
+\resumeItemListEnd
+
+\resumeSubheading
+{Undergraduate Teaching Assistant}{July 2024 -- Present}
 {The University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{
-  Conducted office hours, labs, grading and attended regular staff meetings for a 200-level software engineering course.
-}
+\resumeItem{Taught students about OOP concepts and software engineering best-practices.}
+\resumeItem{Debugged and optimized students' event-driven Java Swing code in office hours and labs.}
+\resumeItem{Achieved an average rating of 4.9/5 rating for student engagement, preparation, and fostering a positive learning environment.}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
 
 \section{Volunteer}
 \resumeSubHeadingListStart
+
 
 \resumeSubheading
 {Automation Developer}{September 2023 -- Present}
@@ -171,6 +185,7 @@
 \resumeItem{Orchestrated the deployment of farming automation web applications using Docker, accelerating the development lifecycle and improved scalablity.}
 \resumeItem{Visualized and stored sensor data transmitted using MQTT into Postgres, ensuring efficent data storage.}
 \resumeItem{Delivering 90\% cost savings by transitioning team from paid, proprietary software to free/open-source solutions.}
+\resumeItem{Debugged Arduino C programs for interfacing with sensors, and taught fellow team members how executables are laid out in memory.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -194,21 +209,20 @@
 \resumeItem{Collaborated with several artists and developers over multiple days to avoid work overlap and streamline work.}
 \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{Decisions Bot} $|$ \emph{Discord API, MongoDB, Python, Docker, Git}}{March 2023}
-\resumeItemListStart
-\resumeItem{Developed a Discord bot to track applicants' admissions decisions.}
-\resumeItem{Employed MongoDB to track decisions, and user calls to the bot to provide more reliable data warehousing.}
-\resumeItem{Collaborated with end users to suggest features and feedback on the bot's behaviour.}
-\resumeItemListEnd
+% \resumeProjectHeading
+% {\textbf{Decisions Bot} $|$ \emph{Discord API, MongoDB, Python, Docker, Git}}{March 2023}
+% \resumeItemListStart
+% \resumeItem{Developed a Discord bot to track applicants' admissions decisions.}
+% \resumeItem{Employed MongoDB to track decisions, and user calls to the bot to provide more reliable data warehousing.}
+% \resumeItem{Collaborated with end users to suggest features and feedback on the bot's behaviour.}
+% \resumeItemListEnd
 
-\resumeProjectHeading
-{\textbf{StudyBuddy} $|$ \emph{Firebase, Flask, OpenAI API, HTML, Python}}{June 2023}
-\resumeItemListStart
-\resumeItem{Working with OpenAI API to solve schedule constraint problems}
-\resumeItem{Leveraged OpenAI API to solve schedule constraint problems, leading to smarter, better schedules.}
-\resumeItem{Used Flask and Firebase to rapidly facilitate OAuth2 based authentication the end user.}
-\resumeItemListEnd
+% \resumeProjectHeading
+% {\textbf{StudyBuddy} $|$ \emph{Firebase, Flask, OpenAI API, HTML, Python}}{June 2023}
+% \resumeItemListStart
+% \resumeItem{Leveraged OpenAI API to solve schedule constraint problems, leading to smarter, better schedules.}
+% \resumeItem{Used Flask and Firebase to rapidly facilitate OAuth2 based authentication the end user.}
+% \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
