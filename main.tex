@@ -23,10 +23,10 @@
 
 %----------FONT OPTIONS----------
 % sans-serif
-% \usepackage[sfdefault]{FiraSans}
+\usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-\usepackage[default]{sourcesanspro}
+% \usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -113,8 +113,8 @@
 
 \begin{center}
   \textbf{\Huge \scshape Randy Zhu} \\ \vspace{1pt}
-  \small 604-704-9500 $|$ \href{mailto:randyzhu@student.ubc.ca}{\underline{randy@randyzhu.com}} $|$
-  \href{https://www.linkedin.com/in/rzhu08/}{{linkedin.com/in/rzhu08}} $|$
+  \small 604-704-9500 $|$ \href{mailto:randy@randyzhu.com}{\underline{randy@randyzhu.com}} $|$
+  \href{https://www.linkedin.com/in/rzhu08/}{\underline{linkedin.com/in/rzhu08}} $|$
   \href{https://github.com/RandoNandoz}{\underline{github.com/RandoNandoz}}
 \end{center}
 
@@ -123,7 +123,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {University of British Columbia}{GPA: 88\%}
-{BSc, Computer Science, Minor in Mathematics, Co-operative Education Program}{September 2023 -- May 2028}
+{BSc, Honours Computer Science and Software Engineering, Co-op}{September 2023 -- May 2028}
 \resumeSubHeadingListEnd
 
 %
@@ -131,10 +131,10 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Java, C\#, Python, C, C++, JavaScript, TypeScript} \\
-        % \textbf{Frameworks}{: JUnit, Unity, NUnit, Swing, Flask,} \\
-        \textbf{Developer Tools}{: Git, Docker, Azure, CloudFlare, Linux, Interactive Disassembler, Cisco Wireless, Hyper-V, VMware ESXi, gdb, lldb, Valgrind Memcheck, Excel} \\
-        \textbf{Libraries}{: Sympy, Numpy, Pandas, Matplotlib, MongoDB, jQuery, Catch, Flask, Swing/Java AWT, NUnit, JUnit, Unity, Boost Graph Library, Power Apps Component Framework}}}
+        \textbf{Languages}{: Java, C\#, Python, C, C++} \\
+        \textbf{Frameworks}{: JUnit, Unity, NUnit, Swing, Flask,} \\
+        \textbf{Developer Tools}{: Git, Docker, Azure, CloudFlare, Linux, Interactive Disassembler, Cisco Wireless, Hyper-V, VMware ESXi, Excel} \\
+        \textbf{Libraries}{: Sympy, Numpy, Pandas, Matplotlib, MongoDB, jQuery, Catch, Flask, Swing/Java AWT, NUnit, JUnit, Unity, Power Apps Component Framework}}}
 \end{itemize}
 
 
@@ -143,12 +143,15 @@
 \resumeSubHeadingListStart
 
 
-% \resumeSubheading
-% {Research Assistant (Undergraduate Student Research Award)}{May 2025 -- Present}
-% {Software Practices Lab (UBC Department of Computer Science)}{Vancouver, BC}
-% \resumeItemListStart
-% \resumeItem{Under the supervision of Dr. Caroline Lemieux, I will be improving a tool to create unit tests from exploratory tests.}
-% \resumeItemListEnd
+\resumeSubheading
+{Research Assistant}{May 2025 -- Sept 2025}
+{Software Practices Lab (UBC Department of Computer Science)}{Vancouver, BC}
+\resumeItemListStart
+\resumeItem{Collaboratively developed unit test generation tool with a fellow summer research intern.}
+% \resumeItem{Utilized program inspection tools in Python to read, .}
+\resumeItem{Created LLM-assisted intelligent detection of global state in Python functions, with both a static and a dynamic analysis pass to determine whether objects should be mocked.}
+\resumeItem{Using PyTest, created high quality, repeated, and fast unit tests that complied with Assert-Arrange-Act testing practices to detect bugs early on in the development lifecycle.}
+\resumeItemListEnd
 
 \resumeSubheading
 {Power Platform Developer Co-op}{September 2024 -- April 2025}
@@ -166,9 +169,8 @@
 {Undergraduate Teaching Assistant}{July 2024 -- Present}
 {The University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Taught students about OOP concepts and software engineering best-practices.}
-\resumeItem{Debugged and optimized students' event-driven Java Swing code in office hours and labs.}
-\resumeItem{Achieved an average rating of 4.9/5 rating for student engagement, preparation, and fostering a positive learning environment.}
+\resumeItem{Debugged and optimized students’ event-driven Java Swing code in office hours and labs.}
+\resumeItem{Achieved an average rating of 4.9/5 for student engagement, preparation, and fostering a positive learning environment.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -183,8 +185,8 @@
 {UBC Agroponics}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Orchestrated the deployment of farming automation web applications using Docker, accelerating the development lifecycle and improved scalablity.}
-\resumeItem{Visualized and stored sensor data transmitted using MQTT into Postgres, ensuring efficent data storage.}
-\resumeItem{Delivering 90\% cost savings by transitioning team from paid, proprietary software to free/open-source solutions.}
+%\resumeItem{Visualized and stored sensor data transmitted using MQTT into Postgres, ensuring efficent data storage.}
+%\resumeItem{Delivering 90\% cost savings by transitioning team from paid, proprietary software to free/open-source solutions.}
 \resumeItem{Debugged Arduino C programs for interfacing with sensors, and taught fellow team members how executables are laid out in memory.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -194,19 +196,17 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\href{https://profsearch.randyzhu.com/}{\textbf{profsearch.randyzhu.com}} $|$ \emph{Flask, Python, HTML, jQuery, Docker}}{May 2024}
+{\href{}{\textbf{ExploTest}} $|$ \emph{Python, static and dynamic program analysis}}{Sept 2025}
 \resumeItemListStart
-\resumeItem{Facilitates searching of previous courses that a UBC professor have taught.}
-\resumeItem{Developed REST API for fuzzy searching professors using Flask. Using API, displayed course data by professor selection on simple website.}
-\resumeItem{Parsed \& cleaned professor data using Pandas; tested \& developed object-oriented model of courses.}
+\resumeItem{ExploTest is a tool used to generate unit tests from system-level integration tests. It captures procedure calls during whole-program execution and creates individual unit tests for each procedure.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\href{https://itch.io/jam/gmtk-2023/rate/2157338?after=0}{\textbf{Collidy Road}} $|$ \emph{Unity, C\#, .NET}}{July 2023}
+{\href{}{\textbf{Collidy Road}} $|$ \emph{Unity, C\#, .NET}}{July 2023}
 \resumeItemListStart
-\resumeItem{Lead developer for a top 10\% of submissions game jam project, a role-reversal of Crossy Road}
-\resumeItem{Optimized particle FX and entity behaviour to support massive enemy count.}
-\resumeItem{Collaborated with several artists and developers over multiple days to avoid work overlap and streamline work.}
+\resumeItem{Achieved 95th percentile rated game quality, voted on by other contestants in the game jam.}
+\resumeItem{Developed player and hostile entity play scripts in C\#.}
+\resumeItem{Optimized game logic for large hostile entity count.}
 \resumeItemListEnd
 
 % \resumeProjectHeading
