@@ -1,0 +1,6 @@
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QJuly 2024 – Present.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QVancouver, BC.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QSeptember 2024 – April 2025.\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QLibraries.: pandas, Matplotlib, MongoDB, jQuery, React, Swing, Java AWT, Power Apps Component Framework, Unity Game Engine, Flask, Firebase .\\E$"}
+{"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QSeptember 2023 – May 2028.\\E$"}

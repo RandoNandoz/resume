@@ -25,7 +25,6 @@
 % sans-serif
 \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
 
 % serif
@@ -123,7 +122,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {University of British Columbia}{GPA: 88\%}
-{BSc, Honours Computer Science and Software Engineering, Co-op}{September 2023 -- May 2028}
+{Bachelor of Science, Honours Computer Science and Software Engineering}{September 2023 -- May 2028}
 \resumeSubHeadingListEnd
 
 %
@@ -131,10 +130,14 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Java, C\#, Python, C, C++} \\
-        \textbf{Frameworks}{: JUnit, Unity, NUnit, Swing, Flask,} \\
-        \textbf{Developer Tools}{: Git, Docker, Azure, CloudFlare, Linux, Interactive Disassembler, Cisco Wireless, Hyper-V, VMware ESXi, Excel} \\
-        \textbf{Libraries}{: Sympy, Numpy, Pandas, Matplotlib, MongoDB, jQuery, Catch, Flask, Swing/Java AWT, NUnit, JUnit, Unity, Power Apps Component Framework}}}
+        \textbf{Languages}{: Java, C\#, Python, C, C++, TypeScript, Lisp (R6RS/Racket), SQL (some T-SQL)} \\
+        \textbf{Developer Tools}{: Git, Docker, VSCode, Visual Studio, Azure, Linux} \\
+        \textbf{Testing Frameworks}{: JUnit, NUnit, PyTest, Playwright} \\
+        \textbf{Libraries}{:
+          pandas, Matplotlib, MongoDB, jQuery, React, Swing, Java AWT,
+          Power Apps Component Framework, Unity Game Engine, Flask, Firebase
+        } \\}}
+        \textbf{Developer Skills}{: Agile Software Development, Unit Testing, Test-Driven Development }
 \end{itemize}
 
 
@@ -144,70 +147,75 @@
 
 
 \resumeSubheading
-{Research Assistant}{May 2025 -- Sept 2025}
+{Research Assistant}{May 2025 -- September 2025}
 {Software Practices Lab (UBC Department of Computer Science)}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Collaboratively developed unit test generation tool with a fellow summer research intern.}
-% \resumeItem{Utilized program inspection tools in Python to read, .}
+\resumeItem{Designed and implemented static and dynamic program analysis techniques to extract program data to facilitate unit test creation.}
 \resumeItem{Created LLM-assisted intelligent detection of global state in Python functions, with both a static and a dynamic analysis pass to determine whether objects should be mocked.}
-\resumeItem{Using PyTest, created high quality, repeated, and fast unit tests that complied with Assert-Arrange-Act testing practices to detect bugs early on in the development lifecycle.}
+\resumeItem{Using PyTest, created high quality, repeated, and fast unit tests in an Assert-Act-Arrange style to detect bugs early on in the development lifecycle.}
 \resumeItemListEnd
 
 \resumeSubheading
 {Power Platform Developer Co-op}{September 2024 -- April 2025}
 {Teck Resources Limited}{Vancouver, BC}
 \resumeItemListStart
+\resumeItem{Created calendar Power App component used by teams across the organization for scheduling and resource management}
 \resumeItem{Developed React photo viewer plugin with Typescript and Power Apps Component Framework}
 \resumeItem{Performed automated testing of Power Apps UIs using Dataverse API and Puppeteer in C\#}
 \resumeItem{Transitioned legacy Excel spreadsheets to Power App solutions using Pandas and Python, converting data and accelerating ETL pipelines for business analysis teams.}
 \resumeItem{Architected efficient relational database schemas in Microsoft Dataverse.}
-\resumeItem{Developed manual test plans in Excel, catching 85\% of bugs before deployment.}
-\resumeItem{Wrote clean, event-driven functional Power FX code for UI and database interaction.}
+% \resumeItem{Wrote clean, event-driven functional Power FX code for UI and database interaction.}
 \resumeItemListEnd
 
 \resumeSubheading
-{Undergraduate Teaching Assistant}{July 2024 -- Present}
+{Undergraduate Teaching Assistant (Intro to SE; Intro to Computer Systems)}{July 2024 -- Present}
 {The University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Debugged and optimized students’ event-driven Java Swing code in office hours and labs.}
-\resumeItem{Achieved an average rating of 4.9/5 for student engagement, preparation, and fostering a positive learning environment.}
+\resumeItem{Debugged and optimized students' event-driven Java Swing code in office hours and labs}
+\resumeItem{Led weekly labs with 90 students per week, achieving an average rating of 4.9/5 for student engagement, preparation, and fostering a positive learning environment}
+\resumeItem{Taught students low-level computer systems concepts such as basic computer architecture, memory management in C, assembly programming in a MIPS dialect, and multithreading}
+\resumeItem{Advised students on debugging strategy for assignments involving complex memory allocation issues}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 
-\section{Volunteer}
-\resumeSubHeadingListStart
+% \section{Volunteer}
+% \resumeSubHeadingListStart
 
 
-\resumeSubheading
-{Automation Developer}{September 2023 -- Present}
-{UBC Agroponics}{Vancouver, BC}
-\resumeItemListStart
-\resumeItem{Orchestrated the deployment of farming automation web applications using Docker, accelerating the development lifecycle and improved scalablity.}
-%\resumeItem{Visualized and stored sensor data transmitted using MQTT into Postgres, ensuring efficent data storage.}
-%\resumeItem{Delivering 90\% cost savings by transitioning team from paid, proprietary software to free/open-source solutions.}
-\resumeItem{Debugged Arduino C programs for interfacing with sensors, and taught fellow team members how executables are laid out in memory.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
+% \resumeSubheading
+% {Automation Developer}{September 2023 -- Present}
+% {UBC Agroponics}{Vancouver, BC}
+% \resumeItemListStart
+% \resumeItem{Orchestrated the deployment of farming automation web applications using Docker, accelerating the development lifecycle and improved scalablity.}
+% %\resumeItem{Visualized and stored sensor data transmitted using MQTT into Postgres, ensuring efficent data storage.}
+% %\resumeItem{Delivering 90\% cost savings by transitioning team from paid, proprietary software to free/open-source solutions.}
+% \resumeItem{Debugged Arduino C programs for interfacing with sensors, and taught fellow team members how executables are laid out in memory.}
+% \resumeItemListEnd
+% \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\href{}{\textbf{ExploTest}} $|$ \emph{Python, static and dynamic program analysis}}{Sept 2025}
+{{\textbf{\href{https://github.com/kliu04/explotest}{ExploTest}}} $|$ \emph{Python, static and dynamic program analysis}}{September 2025}
 \resumeItemListStart
 \resumeItem{ExploTest is a tool used to generate unit tests from system-level integration tests. It captures procedure calls during whole-program execution and creates individual unit tests for each procedure.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\href{}{\textbf{Collidy Road}} $|$ \emph{Unity, C\#, .NET}}{July 2023}
+{{\textbf{\href{https://itch.io/jam/gmtk-2023/rate/2157338}{Collidy Road}}} $|$ \emph{Unity, C\#, .NET}}{July 2023}
 \resumeItemListStart
-\resumeItem{Achieved 95th percentile rated game quality, voted on by other contestants in the game jam.}
-\resumeItem{Developed player and hostile entity play scripts in C\#.}
-\resumeItem{Optimized game logic for large hostile entity count.}
+\resumeItem{Achieved 95th percentile rated game quality, voted on by other contestants in the game jam}
+\resumeItem{Debugged and developed player and hostile entity player interaction scripts in C\# for a smooth gameplay experience}
+\resumeItem{Optimized game logic to allow for over 10000 hostile entities}
 \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
 
 % \resumeProjectHeading
 % {\textbf{Decisions Bot} $|$ \emph{Discord API, MongoDB, Python, Docker, Git}}{March 2023}
@@ -224,8 +232,19 @@
 % \resumeItem{Used Flask and Firebase to rapidly facilitate OAuth2 based authentication the end user.}
 % \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+\section{Awards}
+\resumeSubHeadingListStart
 
+\resumeProjectHeading
+{{\textbf{Natural Sciences and Engineering Research Council of Canada Undergraduate Student Research Award}}}{July 2025}
+
+% \resumeProjectHeading
+% {{\textbf{1st Place, ISACA Vancouver High School CTF}}}{June 2022, 2023}
+
+
+% \resumeProjectHeading
+% {{\textbf{5th Place, 2022 Canadian Cyber Defense Challenge (university bracket)}}}{May 2022}
+\resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
