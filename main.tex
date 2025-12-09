@@ -20,6 +20,9 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{eso-pic}
+
+\RequirePackage{fontawesome}
+
 \input{glyphtounicode}
 
 
@@ -130,8 +133,8 @@
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{University of British Columbia}{GPA: 88\%}
-{Bachelor of Science, Computer Science and Software Engineering}{September 2023 -- May 2028}
+{University of British Columbia}{September 2023 -- December 2027}
+{Bachelor of Science, Honours Computer Science and Software Engineering}{GPA: 88\%}
 \resumeSubHeadingListEnd
 
 %
@@ -139,15 +142,11 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Java, C\#, Python, C, C++, TypeScript, Lisp (R6RS/Racket), SQL (some T-SQL)} \\
-        \textbf{Developer Tools}{: Git, Docker, VSCode, Visual Studio, IntelliJ, Azure, Linux} \\
+        \textbf{Languages}{: Python, Java, C\#, TypeScript, HTML/CSS, C++, C, SQL, MIPS Assembly} \\
+        \textbf{Developer Tools}{: Git, Docker, Linux} \\
         \textbf{Testing Frameworks}{: JUnit, NUnit, PyTest, Playwright} \\
-        \textbf{Technologies}{:
-          pandas, Matplotlib, MongoDB, jQuery, React, Swing, Java AWT,
-          Power Apps Component Framework, Unity Game Engine, Flask, Firebase,
-          ASP.NET, Entity Framework, SQLAlchemy, CsvHelper, Dynamics CRM, PostgreSQL, Microsoft SQL Server
-        } \\}}
-        \textbf{Developer Skills}{: Agile Software Development, Unit Testing, Test-Driven Development }
+        \textbf{Technologies}{: React.js, Google Maps API, Unity Game Engine, Express.js, Google Cloud Run, Power BI, SQL Server Management Studio (SSMS), pandas, pthreads} \\
+        }}
 \end{itemize}
 
 
@@ -158,34 +157,32 @@
 
 \resumeSubheading
 {Research Assistant}{May 2025 -- September 2025}
-{\href{https://spl.cs.ubc.ca/}{Software Practices Lab (UBC Department of Computer Science)}}{Vancouver, BC}
+{\href{https://spl.cs.ubc.ca/}{Software Practices Lab}}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Collaboratively developed unit test generation tool with a fellow summer research intern.}
-\resumeItem{Designed and implemented static and dynamic program analysis techniques to extract program data to facilitate unit test creation.}
-\resumeItem{Created LLM-assisted intelligent detection of global state in Python functions, with both a static and a dynamic analysis pass to determine whether objects should be mocked.}
-\resumeItem{Using PyTest, created high quality, repeated, and fast unit tests in an Assert-Act-Arrange style to detect bugs early on in the development lifecycle.}
+\resumeItem{Implemented \textbf{graph algorithms for static and dynamic program analysis in Python} for automated unit test generation}
+\resumeItem{Identified external dependencies to functions by extracting docstrings from objects for analysis with Gemma 3n on ollama}
+\resumeItem{Developed the tool using Agile methodologies like \textbf{Kanban}; managed source code collaboration using \textbf{Git}}
+\resumeItem{Caught 76\% of bugs and covered 85\% of code base using test-driven-design by writing over 300 \textbf{unit tests in PyTest, mocking expensive API calls using pytest\_mock and monkeypatch}}
 \resumeItemListEnd
 
 \resumeSubheading
 {Power Platform Developer}{September 2024 -- April 2025}
 {\href{https://www.teck.com/}{Teck Resources}}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Created calendar Power App component used by teams across the organization for scheduling and resource management}
-\resumeItem{Developed React photo viewer plugin with Typescript and Power Apps Component Framework}
-\resumeItem{Performed automated testing of Power Apps UIs using Dataverse API and Puppeteer in C\#}
-\resumeItem{Transitioned legacy Excel spreadsheets to Microsoft Fabric solutions using Pandas and Python, enabling business analytics teams.}
-\resumeItem{Architected efficient relational database schemas in Microsoft Dataverse}
-% \resumeItem{Wrote clean, event-driven functional Power FX code for UI and database interaction.}
+\resumeItem{Created calendar component used by \textbf{teams across the org} using the Power Apps Component API, React.js, TypeScript and the Microsoft Fluent UI React toolkit}
+\resumeItem{Tested web apps, catching 87\% of bugs before reaching user acceptance tests using \textbf{Playwright} and \textbf{NUnit} and \textbf{C\#}}%
+\resumeItem{Saved over 100 hours for site engineering teams by creating a data ingest tool using the Microsoft Dataverse \textbf{REST API} in \textbf{C\#}}
+\resumeItem{Presented \textbf{Power BI} dashboard of on-site safety events across business units by unifying data from legacy databases, using \textbf{SSMS,
+    to wrangle data using SQL}, then finer transformations using \textbf{M}, \textbf{DAX} and \textbf{pandas} for the final dashboard}
 \resumeItemListEnd
 
 \resumeSubheading
 {Undergraduate Teaching Assistant}{July 2024 -- Present}
 {The University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Debugged and optimized students' event-driven Java Swing code in office hours and labs}
-\resumeItem{Led weekly labs with 90 students per week, achieving an average rating of 4.9/5 for student engagement, preparation, and fostering a positive learning environment}
-\resumeItem{Taught students low-level computer systems concepts such as basic computer architecture, assembly programming in a MIPS dialect, memory management in C, threading, and C++ vtables}
-% \resumeItem{Advised students on debugging strategy for assignments involving complex memory allocation issues}
+\resumeItem{Achieved a 98\% rating from students for \textbf{debugging their event-driven Swing code in Java}}
+\resumeItem{Lectured during seminars on low-level programming fundamentals like \textbf{MIPS Assembly, stack frames, and POSIX pthreads}}
+\resumeItem{Explained and solved parallel programming problems as a part of office hours using \textbf{spinlocks, mutexes, and threading}}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -207,21 +204,30 @@
 % \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Projects}
+\section{Projects (clickable links in title)}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{{\textbf{\href{https://github.com/kliu04/explotest}{ExploTest}}} $|$ \emph{Python, static and dynamic program analysis}}{September 2025}
+{{\textbf{\href{https://insightubc.randyzhu.com}{\underline{Campus Explorer}}}} $|$ \emph{TypeScript, React.js, express.js, Google Maps API, Docker, Google Cloud Run}}{2025}
 \resumeItemListStart
-\resumeItem{ExploTest is a research prototype used to generate unit tests from system-level integration tests. It captures procedure calls during whole-program execution and creates individual unit tests for each procedure.}
+\resumeItem{Designed REST APIs and implemented them in express.js, writing middleware to route rooms using the Google Maps Routing API for cycling and walking paths}
+\resumeItem{Containerized the backend using \textbf{Docker and deployed the API to Google Cloud Run}}
+\resumeItem{Displayed and transformed embedded map using the Google Maps JavaScript API on React.js based frontend}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{\href{https://itch.io/jam/gmtk-2023/rate/2157338}{Collidy Road}}} $|$ \emph{Unity, C\#, .NET}}{July 2023}
+{{\textbf{\href{https://randyzhu.com/project/explotest}{\underline{ExploTest}}}} $|$ \emph{Python, static and dynamic program analysis}}{2025}
 \resumeItemListStart
-\resumeItem{Achieved 95th percentile rated game quality, voted on by other contestants in the game jam}
-\resumeItem{Debugged and developed player and hostile entity player interaction scripts in C\# for a smooth gameplay experience}
-\resumeItem{Optimized game logic to allow for over 10000 hostile entities}
+\resumeItem{Research prototype used to generate unit tests from integration tests for Python programs}
+\resumeItem{Created static abstract syntax tree analyses along with dynamic tracing of Python code at runtime to capture function inputs and outputs}
+
+\resumeItemListEnd
+
+\resumeProjectHeading
+{{\textbf{\href{https://itch.io/jam/gmtk-2023/rate/2157338}{\underline{Collidy Road}}}} $|$ \emph{Unity, C\#, .NET}}{2023}
+\resumeItemListStart
+\resumeItem{Achieved \textbf{top 5\% game quality} as rated by other players in the game jam}
+\resumeItem{In the Unity Game Engine, developed player interaction and hostile AI scripts using C\#}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -242,19 +248,19 @@
 % \resumeItem{Used Flask and Firebase to rapidly facilitate OAuth2 based authentication the end user.}
 % \resumeItemListEnd
 
-\section{Awards}
-\resumeSubHeadingListStart
-
-\resumeProjectHeading
-{{\textbf{Natural Sciences and Engineering Research Council of Canada Undergraduate Student Research Award}}}{July 2025}
+% \section{Awards}
+% \resumeSubHeadingListStart
 
 % \resumeProjectHeading
-% {{\textbf{1st Place, ISACA Vancouver High School CTF}}}{June 2022, 2023}
+% {{\textbf{Natural Sciences and Engineering Research Council of Canada Undergraduate Student Research Award}}}{July 2025}
+
+% % \resumeProjectHeading
+% % {{\textbf{1st Place, ISACA Vancouver High School CTF}}}{June 2022, 2023}
 
 
-% \resumeProjectHeading
-% {{\textbf{5th Place, 2022 Canadian Cyber Defense Challenge (university bracket)}}}{May 2022}
-\resumeSubHeadingListEnd
+% % \resumeProjectHeading
+% % {{\textbf{5th Place, 2022 Canadian Cyber Defense Challenge (university bracket)}}}{May 2022}
+% \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
