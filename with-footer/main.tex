@@ -43,11 +43,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Add co-op footer image to bottom right
-% \AddToShipoutPictureBG*{%
-%   \put(\LenToUnit{0.61\paperwidth}, \LenToUnit{0.01\paperheight}){%
-%     \includegraphics[width=0.38\textwidth]{co-op footer.jpg}%
-%   }%
-% }
+\AddToShipoutPictureBG*{%
+  \put(\LenToUnit{0.61\paperwidth}, \LenToUnit{0.01\paperheight}){%
+    \includegraphics[width=0.38\textwidth]{co-op footer.jpg}%
+  }%
+}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -55,6 +55,7 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
+\setlength{\footskip}{4.08003pt}
 
 \urlstyle{same}
 
@@ -134,7 +135,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {University of British Columbia}{September 2023 -- December 2027}
-{Bachelor of Science, Honours Computer Science, Option in Software Engineering}{GPA: 88\%}
+{Bachelor of Science, Honours Computer Science and Software Engineering}{GPA: 88\%}
 \resumeSubHeadingListEnd
 
 %
@@ -157,7 +158,7 @@
 
 \resumeSubheading
 {Research Assistant}{May 2025 -- September 2025}
-{Software Practices Lab}{Vancouver, BC}
+{\href{https://spl.cs.ubc.ca/}{Software Practices Lab}}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Implemented \textbf{graph algorithms for static and dynamic program analysis in Python} for automated unit test generation}
 \resumeItem{Identified external dependencies to functions by extracting docstrings from objects for analysis with an open source LLM, \textbf{Gemma 3n on ollama}}
@@ -166,8 +167,8 @@
 \resumeItemListEnd
 
 \resumeSubheading
-{Software Developer Intern}{September 2024 -- April 2025}
-{Teck Resources}{Vancouver, BC}
+{Power Platform Developer}{September 2024 -- April 2025}
+{\href{https://www.teck.com/}{Teck Resources}}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Created calendar component used by \textbf{teams across the org} using the Power Apps Component API, React.js, TypeScript and the Microsoft Fluent UI React toolkit}
 \resumeItem{Tested web apps, catching 87\% of bugs before reaching user acceptance tests using \textbf{Playwright} and \textbf{NUnit} and \textbf{C\#}}%
