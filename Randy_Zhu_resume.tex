@@ -37,7 +37,7 @@
 % \usepackage{CormorantGaramond}
 % \usepackage{charter}
 
- 
+
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \renewcommand{\headrulewidth}{0pt}
@@ -136,6 +136,8 @@
 \resumeSubheading
 {University of British Columbia}{September 2023 -- December 2027}
 {Bachelor of Science, Honours Computer Science, Option in Software Engineering}{GPA: 88\%}
+% \vspace{-2pt}
+% \resumeSubSubheading{Coursework: Intro to Compilers, Calculus 4}{}
 \resumeSubHeadingListEnd
 
 %
@@ -143,10 +145,10 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: Python, Java, C\#, TypeScript, HTML/CSS, C++, C, SQL, MIPS Assembly, Swift} \\
+        \textbf{Languages}{: C++, C, Swift, Python, Java, C\#, TypeScript, HTML/CSS, SQL} \\
         \textbf{Developer Tools}{: Git, Docker, Linux} \\
-        \textbf{Testing Frameworks}{: JUnit, NUnit, PyTest, Playwright} \\
-        \textbf{Technologies}{: React.js, Google Maps API, Unity Game Engine, Express.js, Google Cloud Run, Power BI, SQL Server Management Studio (SSMS), pandas, pthreads} \\
+        \textbf{Testing Frameworks}{: Playwright, JUnit, NUnit, Swift Testing, PyTest} \\
+        \textbf{Technologies}{: React.js, Unity Game Engine, Express.js, Google Cloud Run, Power BI} \\
         }}
 \end{itemize}
 
@@ -157,33 +159,34 @@
 
 
 \resumeSubheading
-{Research Assistant}{May 2025 -- September 2025}
-{Software Practices Lab}{Vancouver, BC}
+{Software Developer Intern}{May 2025 -- September 2025}
+{University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Implemented \textbf{graph algorithms for static and dynamic program analysis in Python} for automated unit test generation}
-\resumeItem{Identified external dependencies to functions by extracting docstrings from objects for analysis with an open source LLM, \textbf{Gemma 3n on ollama}}
-\resumeItem{Developed the tool using Agile methodologies like \textbf{Kanban}; managed source code collaboration using \textbf{Git}}
-\resumeItem{Caught 76\% of bugs and covered 85\% of code base using test-driven-design by writing over 300 \textbf{unit tests in PyTest, mocking expensive API calls using pytest\_mock and monkeypatch}}
+\resumeItem{Secured a \$6000 grant to develop and research a tool to create unit tests from integration tests.}
+\resumeItem{Implemented graph algorithms for static and dynamic program analysis in Python for automated unit test generation}
+\resumeItem{Identified external dependencies to functions by extracting docstrings from objects for analysis with an open source LLM, Gemma 3n on ollama}
+\resumeItem{Developed the tool using Agile methodologies like Kanban; managed source code collaboration using Git}
+\resumeItem{Caught 76\% of bugs and covered 85\% of code base using test-driven-design by writing over 300 unit tests in PyTest, mocking expensive API calls using pytest\_mock and monkeypatch}
 \resumeItemListEnd
 
 \resumeSubheading
 {Software Developer Intern}{September 2024 -- April 2025}
 {Teck Resources}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Created calendar component used by \textbf{teams across the org} using the Power Apps Component API, React.js, TypeScript and the Microsoft Fluent UI React toolkit}
-\resumeItem{Tested web apps, catching 87\% of bugs before reaching user acceptance tests using \textbf{Playwright} and \textbf{NUnit} and \textbf{C\#}}%
-\resumeItem{Saved over 100 hours for site engineering teams by creating a data ingest tool using the Microsoft Dataverse \textbf{REST API} in \textbf{C\#}}
-\resumeItem{Presented \textbf{Power BI} dashboard of on-site safety events across business units by unifying data from legacy databases, using \textbf{SSMS,
-    to wrangle data using SQL}, then finer transformations using \textbf{M}, \textbf{DAX} and \textbf{pandas} for the final dashboard}
+\resumeItem{Created calendar component used by teams across the org using the Power Apps Component API, React.js, TypeScript and the Microsoft Fluent UI React toolkit}
+\resumeItem{Tested web apps, catching 87\% of bugs before reaching user acceptance tests using Playwright and NUnit and C\#}%
+\resumeItem{Saved over 100 hours for site engineering teams by creating a data ingest tool using the Microsoft Dataverse REST API in C\#}
+\resumeItem{Presented Power BI dashboard of on-site safety events across business units by unifying data from legacy databases, using SSMS,
+  to wrangle data using SQL, then finer transformations using M, DAX and pandas for the final dashboard}
 \resumeItemListEnd
 
 \resumeSubheading
 {Teaching Assistant}{July 2024 -- Present}
 {The University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Achieved a 98\% favourable rating from students for \textbf{debugging their event-driven Swing code in Java}}
-\resumeItem{Lectured during seminars on low-level programming fundamentals like \textbf{MIPS Assembly, stack frames, and POSIX pthreads}}
-\resumeItem{Explained and solved parallel programming problems as a part of office hours using \textbf{spinlocks, mutexes, and threading}}
+\resumeItem{Achieved a 98\% favourable rating from students for debugging their event-driven Swing code in Java}
+\resumeItem{Lectured during seminars on low-level programming fundamentals like MIPS Assembly, stack frames, and POSIX pthreads}
+\resumeItem{Explained and solved parallel programming problems as a part of office hours using spinlocks, mutexes, and threading}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -209,31 +212,34 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{{\textbf{Racket Compiler}} $|$ \emph{x86 assembly, Linux ABI, C, Racket (Scheme/Lisp), gdb}}{2026}
+{{\textbf{iSCSI Driver for macOS}} $|$ \emph{Swift, C++, DriverKit, Networking, iSCSI (RFC 7143)}}{}
 \resumeItemListStart
-% \resumeItem{Compiler for a subset of Racket to x86 assembly (work in progress)}
-\resumeItem{Implemented \textbf{instruction selection and register allocation using graph colouring algorithms} to minimize expensive memory reads}
-\resumeItem{Working towards support for first class functions via closure conversion, and \textbf{tail call optimization to enable efficient recursion}}
+\resumeItem{iSCSI is a storage protocol similar to SMB or NFS, but at a lower level. This project aims to create an free and open-source alternative
+  that uses the new DriverKit API instead of kernel modules.}
+\resumeItem{Working around limitations of DriverKit by implementing the networking client in user space with Swift}
+\resumeItem{Implemented SCSI device driver with ring buffers to improve performance using C++ without the STL}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{\href{https://insightubc.randyzhu.com}{\underline{Campus Explorer}}}} $|$ \emph{TypeScript, React.js, express.js, Google Maps API, Docker, Google Cloud Run}}{2025}
+{{\textbf{Lisp Compiler}} $|$ \emph{x86 assembly, Linux ABI, C, Lisp, gdb}}{}
+\resumeItemListStart
+% \resumeItem{Compiler for a subset of Racket to x86 assembly (work in progress)}
+\resumeItem{Implemented instruction selection and register allocation using graph colouring algorithms to minimize expensive memory reads}
+\resumeItem{Working towards support for first class functions via closure conversion, and tail call optimization to enable efficient recursion}
+\resumeItem{This compiler implements the Epsilon Garbage Collection algorithm from Java}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{{\textbf{\href{https://insightubc.randyzhu.com}{\underline{Campus Explorer}}}} $|$ \emph{TypeScript, React.js, express.js, Google Maps API, Docker, Google Cloud Run}}{}
 \resumeItemListStart
 \resumeItem{Designed REST APIs and implemented them in express.js, writing middleware to route rooms using the Google Maps Routing API for cycling and walking paths}
-\resumeItem{Containerized the backend using \textbf{Docker and deployed the API to Google Cloud Run}}
+\resumeItem{Containerized the backend using Docker and deployed the API to Google Cloud Run}
 \resumeItem{Displayed and transformed embedded map using the Google Maps JavaScript API on React.js based frontend}
 \resumeItemListEnd
 
-\resumeProjectHeading
-{{\textbf{iscsi-driverkit}} $|$ \emph{Swift, C++, DriverKit, Networking, iSCSI (RFC 7143)}}{2025}
-\resumeItemListStart
-\resumeItem{iSCSI is a storage protocol similar to SMB. macOS has no support for it, and third-party addons use deprecated kernel modules and are closed source. This project aims to create a GPLv2, trusted, open-source implementation that uses modern APIs (i.e., no kernel extensions).}
-\resumeItem{Working around limitations of DriverKit by \textbf{implementing the networking client in user space with Swift}}
-\resumeItem{Implemented SCSI device driver with ring buffers to improve performance using \textbf{C++} without the STL}
-\resumeItemListEnd
 
 % \resumeProjectHeading
-% {{\textbf{\href{https://itch.io/jam/gmtk-2023/rate/2157338}{\underline{Collidy Road}}}} $|$ \emph{Unity, C\#, .NET}}{2023}
+% {{\textbf{\href{https://itch.io/jam/gmtk-2023/rate/2157338}{\underline{Collidy Road}}}} $|$ \emph{Unity, C\#, .NET}}{}
 % \resumeItemListStart
 % \resumeItem{Achieved \textbf{top 5\% game quality} as rated by other players in the game jam}
 % \resumeItem{In the Unity Game Engine, developed player interaction and hostile AI scripts using C\#}
