@@ -212,12 +212,12 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{{\textbf{iSCSI Driver for macOS}} $|$ \emph{Swift, C++, DriverKit, Networking, iSCSI (RFC 7143)}}{}
+{{\textbf{iSCSI Driver for macOS}} $|$ \emph{Swift, C++, DriverKit, Networking, iSCSI}}{}
 \resumeItemListStart
-\resumeItem{iSCSI is a storage protocol similar to SMB or NFS, but at a lower level. This project aims to create an free and open-source alternative
+\resumeItem{iSCSI is a storage protocol similar to Windows File Sharing (SMB) or NFS, but at a lower level. This project aims to create an free and open-source alternative
   that uses the new DriverKit API instead of kernel modules.}
 \resumeItem{Working around limitations of DriverKit by implementing the networking client in user space with Swift}
-\resumeItem{Implemented SCSI device driver with ring buffers to improve performance using C++ without the STL}
+\resumeItem{Improved performance by designing and using a ring buffer to forward driver SCSI data to user space}
 \resumeItemListEnd
 
 \resumeProjectHeading
