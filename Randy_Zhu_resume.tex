@@ -135,7 +135,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {University of British Columbia}{September 2023 -- December 2027}
-{Bachelor of Science, Honours Computer Science, Option in Software Engineering}{GPA: 88\%}
+{Bachelor of Science, Honours Computer Science, Option in Software Engineering, Minor in Mathematics}{GPA: 88\%}
 % \vspace{-2pt}
 % \resumeSubSubheading{Coursework: Intro to Compilers, Calculus 4}{}
 \resumeSubHeadingListEnd
@@ -145,10 +145,11 @@
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-        \textbf{Languages}{: C++, C, Swift, Python, Java, C\#, TypeScript, HTML/CSS, SQL} \\
-        \textbf{Developer Tools}{: Git, Docker, Linux} \\
-        \textbf{Testing Frameworks}{: Playwright, JUnit, NUnit, Swift Testing, PyTest} \\
-        \textbf{Technologies}{: React.js, Unity Game Engine, Express.js, Google Cloud Run, Power BI} \\
+          % C++, C, Swift, Python, Java, C\#, TypeScript, HTML/CSS, SQL
+          \textbf{Languages}{: Python, Swift, C++, C\#, TypeScript, C, SQL, HTML/CSS} \\
+          \textbf{Developer Tools}{: Git, Docker, Linux, Claude Code} \\
+          \textbf{Testing Frameworks}{: Playwright, JUnit, NUnit, Swift Testing, PyTest} \\
+          \textbf{Technologies}{: React.js, Unity Game Engine, Express.js, Google Cloud Run, Power BI} \\
         }}
 \end{itemize}
 
@@ -159,7 +160,7 @@
 
 
 \resumeSubheading
-{Software Developer Intern}{May 2025 -- September 2025}
+{Research Assistant}{May 2025 -- September 2025}
 {University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Secured a \$6000 grant to develop and research a tool to create unit tests from integration tests.}
@@ -182,7 +183,7 @@
 
 \resumeSubheading
 {Teaching Assistant}{July 2024 -- Present}
-{The University of British Columbia}{Vancouver, BC}
+{University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Achieved a 98\% favourable rating from students for debugging their event-driven Swing code in Java}
 \resumeItem{Lectured during seminars on low-level programming fundamentals like MIPS Assembly, stack frames, and POSIX pthreads}
@@ -212,7 +213,18 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{{\textbf{iSCSI Driver for macOS}} $|$ \emph{Swift, C++, DriverKit, Networking, iSCSI}}{}
+{{\textbf{\href{https://github.com/kliu04/sasquatch}{\underline{Sasquatch}}}} $|$ \emph{Swift, ARKit, LiDAR, Detectron2, Open3D, Python, FastAPI, PostgreSQL, GCP}}{}
+\resumeItemListStart
+\resumeItem{ Built an ML pipeline combining Detectron2 instance segmentation with LiDAR point cloud processing to detect
+  climbing wall holds and generate routes of varying difficulty}
+\resumeItem{Implemented PCA-based wall orientation detection to automatically position a virtual pinhole camera, projecting 3D
+  point clouds to 2D for inference and back-projecting detections to world coordinates }
+\resumeItem{Integrated Google Gemini for hold classification, Open3D for 3D processing, and FastAPI for a real-time API
+  consumed by an iOS capture app implemented in Swift with SwiftUI}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{{\textbf{iSCSI Driver for macOS}} $|$ \emph{Swift, C++, DriverKit, iSCSI}}{}
 \resumeItemListStart
 \resumeItem{iSCSI is a storage protocol similar to Windows File Sharing (SMB) or NFS, but at a lower level. This project aims to create an free and open-source alternative
   that uses the new DriverKit API instead of kernel modules.}
@@ -221,21 +233,14 @@
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{Lisp Compiler}} $|$ \emph{x86 assembly, Linux ABI, C, Lisp, gdb}}{}
+{{\textbf{Lisp Compiler}} $|$ \emph{x86 assembly, Linux ABI, C, Lisp, gdb, LLVM IR}}{}
 \resumeItemListStart
 % \resumeItem{Compiler for a subset of Racket to x86 assembly (work in progress)}
-\resumeItem{Implemented instruction selection and register allocation using graph colouring algorithms to minimize expensive memory reads}
+\resumeItem{Implemented register allocation using graph colouring algorithms to minimize memory reads}
 \resumeItem{Working towards support for first class functions via closure conversion, and tail call optimization to enable efficient recursion}
-\resumeItem{This compiler implements the Epsilon Garbage Collection algorithm from Java}
+\resumeItem{Designed an LLVM IR backend for the project to make the compiler platform-agnostic}
 \resumeItemListEnd
 
-\resumeProjectHeading
-{{\textbf{\href{https://insightubc.randyzhu.com}{\underline{Campus Explorer}}}} $|$ \emph{TypeScript, React.js, express.js, Google Maps API, Docker, Google Cloud Run}}{}
-\resumeItemListStart
-\resumeItem{Designed REST APIs and implemented them in express.js, writing middleware to route rooms using the Google Maps Routing API for cycling and walking paths}
-\resumeItem{Containerized the backend using Docker and deployed the API to Google Cloud Run}
-\resumeItem{Displayed and transformed embedded map using the Google Maps JavaScript API on React.js based frontend}
-\resumeItemListEnd
 
 
 % \resumeProjectHeading
