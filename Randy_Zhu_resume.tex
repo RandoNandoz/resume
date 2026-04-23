@@ -29,9 +29,11 @@
 
 %----------FONT OPTIONS----------
 % sans-serif
-\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{FiraSans}
 % \usepackage[sfdefault]{roboto}
-% \usepackage[default]{sourcesanspro}
+\usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -124,10 +126,11 @@
 
 \begin{center}
   \textbf{\huge \scshape Randy Zhu} \\ \vspace{1pt}
-  \small 604-704-9500 $|$ \href{mailto:randy@randyzhu.com}{\underline{randy@randyzhu.com}} $|$
-  \href{https://www.linkedin.com/in/rzhu08/}{\underline{linkedin.com/in/rzhu08}} $|$
+  \small 604-704-9500 $|$
+  \href{mailto:randy@randyzhu.com}{\underline{randy@randyzhu.com}} $|$
   \href{https://randyzhu.com}{\underline{randyzhu.com}} $|$
-  \href{https://github.com/RandoNandoz}{\underline{github.com/RandoNandoz}}
+  \href{https://github.com/RandoNandoz}{\underline{github.com/RandoNandoz}} $|$
+  \href{https://www.linkedin.com/in/rzhu08/}{\underline{linkedin.com/in/rzhu08}}
 \end{center}
 
 %-----------EDUCATION-----------
@@ -135,9 +138,9 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {University of British Columbia}{April 2028}
-{Bachelor of Science, Computer Science}{GPA: 88.4}
-\vspace{-4pt}
-\resumeSubSubheading{Relevant Coursework: Compilers (A+), Computer Architecture and OS (A-)}{}
+{Bachelor of Science, Computer Science, Option in Software Engineering}{GPA: 3.86/4}
+\vspace{-3pt}
+\resumeSubSubheading{Relevant Coursework: Compilers (A+), Programming Languages (A+), Computer Architecture and OS (A-)}{}
 \resumeSubHeadingListEnd
 
 %
@@ -146,9 +149,9 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
           \textbf{Languages}{: C, C++, Rust, Swift, C\#, Java, Python, SQL, TypeScript, HTML+CSS, Racket} \\
-          \textbf{Developer Tools}{: Git, Docker, Linux, Claude Code} \\
-          % \textbf{Testing Frameworks}{: Playwright, JUnit, NUnit, Swift Testing, PyTest} \\
-          % \textbf{Technologies}{: React.js, Unity Game Engine, Express.js, Google Cloud Run, Power BI} \\
+          \textbf{Compilers}{: LLVM IR, SSA form, dataflow analysis} \\
+          \textbf{Systems \& Hardware}{: Darwin Kernel, device trees, ARM} \\
+          \textbf{Tools}{: GDB, Valgrind, Sanitizers, perf, dtrace, CMake, cross-compilation, QEMU}
         }}
 \end{itemize}
 
@@ -158,43 +161,43 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{Firmware Engineer Intern}{May 2026 -- December 2026}
+{Firmware Engineer Intern}{May 2026 -- Present}
 {Netgear}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Point 1}
+\resumeItem{Point 1 \\ extra stuff for p1}
 \resumeItem{Point 2}
-\resumeItem{Point 3}
+\resumeItem{Point 3 \\ extra stuff for p3}
 \resumeItem{Point 4}
+\resumeItem{Point 5 \\ extra stuff for p5}
 \resumeItemListEnd
 
 
 
 \resumeSubheading
-{Research Assistant}{May 2025 -- September 2025}
-{University of British Columbia}{Vancouver, BC}
+{Research Intern}{May 2025 -- September 2025}
+{Software Practices Lab (UBC)}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Secured a \$6000 grant to develop and research a tool to create unit tests from integration tests.}
-\resumeItem{Implemented graph algorithms for static and dynamic program analysis in Python for automated unit test generation}
-\resumeItem{Identified external dependencies to functions by extracting docstrings from objects for analysis with an open source LLM, Gemma 3n on ollama}
+\resumeItem{Secured \$6000 grant to conduct full-time research, directly supervised by Dr. Caroline Lemieux, a Canada Research Chair}
+\resumeItem{Created tool which works on 64\% of popular open-source repositories that generates unit tests from integration tests}
+\resumeItem{Implemented various LLM guided control and data flow analyses that integrated with Gemma 3n, an on device model}
 \resumeItemListEnd
 
 \resumeSubheading
 {Software Developer Intern}{September 2024 -- April 2025}
 {Teck Resources}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Created calendar component used by teams across the org using the Power Apps Component API, React.js, TypeScript and the Microsoft Fluent UI React toolkit}
-\resumeItem{Tested web apps, catching 87\% of bugs before reaching user acceptance tests using Playwright and NUnit and C\#}%
-\resumeItem{Saved over 100 hours for site engineering teams by creating a data ingest tool using the Microsoft Dataverse REST API in C\#}
+\resumeItem{Saved 100 hours for mine site engineering teams by creating a data ingest tool using the Dataverse API in C\#}
+\resumeItem{Introduced team to Playwright, catching 87\% of bugs before reaching manual testing using Playwright and NUnit}%
+\resumeItem{Created calendar component used by teams across the org using React.js, TypeScript and Fluent UI React toolkit}
 \resumeItemListEnd
 
-% \resumeSubheading
-% {Teaching Assistant (Introduction to Computer Systems)}{July 2024 -- Present}
-% {University of British Columbia}{Vancouver, BC}
-% \resumeItemListStart
-% \resumeItem{Achieved a 98\% favourable rating from students for debugging their event-driven Swing code in Java}
-% \resumeItem{Lectured during seminars on low-level programming fundamentals like MIPS Assembly, stack frames, and POSIX pthreads}
-% \resumeItem{Explained and solved parallel programming problems as a part of office hours using spinlocks, mutexes, and threading}
-% \resumeItemListEnd
+\resumeSubheading
+{Teaching Assistant}{July 2024 -- Present}
+{University of British Columbia}{Vancouver, BC}
+\resumeItemListStart
+\resumeItem{Covered professor's lectures on MIPS assembly, stack frames, and POSIX threading to 200+ students}
+\resumeItem{Achieved 98\% favourable rating (n=102); helped students debug concurrent C code using the pthread library}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
@@ -220,7 +223,7 @@
 
 
 \resumeProjectHeading
-{{\textbf{iSCSI Driver for macOS}} $|$ \emph{Swift, C++, DriverKit, iSCSI}}{November 2025 -- Present}
+{{\textbf{macOS iSCSI Driver}} $|$ \emph{C++, DriverKit, IOKit, Swift}}{November 2025 -- Present}
 \resumeItemListStart
 \resumeItem{iSCSI is a storage protocol similar to Windows File Sharing (SMB) or NFS, but at a lower level. This project aims to create an free and open-source alternative
   that uses the new DriverKit API instead of kernel modules.}
@@ -238,7 +241,7 @@
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{\href{https://github.com/kliu04/sasquatch}{\underline{Sasquatch}}}} $|$ \emph{Swift, ARKit, LiDAR, Detectron2, Open3D, Python, FastAPI, PostgreSQL, GCP}}{March 2026 (Hackathon Project)}
+{{\textbf{\href{https://github.com/kliu04/sasquatch}{\underline{Sasquatch}}}} $|$ \emph{Swift, ARKit, LiDAR, Detectron2, Open3D, Python, FastAPI, PostgreSQL, GCP}}{}
 \resumeItemListStart
 \resumeItem{ Built an ML pipeline combining Detectron2 instance segmentation with LiDAR point cloud processing to detect
   climbing wall holds and generate routes of varying difficulty}

@@ -4,3 +4,4 @@
 {"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\QLibraries.: pandas, Matplotlib, MongoDB, jQuery, React, Swing, Java AWT, Power Apps Component Framework, Unity Game Engine, Flask, Firebase .\\E$"}
 {"rule":"COMMA_PARENTHESIS_WHITESPACE","sentence":"^\\Q.\\E$"}
 {"rule":"SENTENCE_WHITESPACE","sentence":"^\\QSeptember 2023 – May 2028.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qresearch, directly supervised by Dr. Caroline Lemieux, a Canada Research Chair.\\E$"}
