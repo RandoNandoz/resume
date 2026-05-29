@@ -8,18 +8,19 @@ This is Randy Zhu's personal resume repository. The primary artifact is a LaTeX 
 
 ## Building the Resume
 
+Use `build.py` — it reads `build.yaml` and handles grad-date variants and anonymized builds.
+
 ```bash
-# Compile to PDF (preferred — handles multiple passes automatically)
-latexmk -pdf Randy_Zhu_resume.tex
-
-# Or with pdflatex directly
-pdflatex Randy_Zhu_resume.tex
-
-# Clean auxiliary build files
-latexmk -c
+./build.py              # build default variant → Randy_Zhu_resume.pdf
+./build.py anon         # anonymized variant → Randy_Zhu_resume_anon.pdf
+./build.py dec2027      # December 2027 grad date
+./build.py --all        # build every variant in build.yaml
+./build.py --list       # show all variant names and settings
 ```
 
-The `with-footer/main.tex` is a variant of the resume that includes a co-op footer image. Build it the same way from within that directory.
+Variants and the redaction map (real company names → anonymized placeholders) are configured in `build.yaml`. The `.tex` source is never modified; a substituted copy is written to `.build/` (gitignored) and compiled there.
+
+The `with-footer/main.tex` is a variant of the resume that includes a co-op footer image. Build it with `latexmk -pdf main.tex` from within that directory.
 
 ## LaTeX Structure
 

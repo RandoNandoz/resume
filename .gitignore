@@ -304,3 +304,6 @@ TSWLatexianTemp*
 
 *Transcript*
 *Cover Letter*/
+
+# build tool intermediate files
+.build/

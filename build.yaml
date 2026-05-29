@@ -1,0 +1,34 @@
+# Default variant built when no argument is passed to build.py.
+default: current
+
+# Plain-string redactions applied to the .tex source when anonymize: true.
+# Longest keys are applied first to avoid partial-overlap collisions.
+redactions:
+  Netgear: "Small Networking Gadget Co."
+  Teck Resources: "Mining Co."
+  Software Practices Lab: "University Research Lab"
+  randy@randyzhu.com: anon@example.com
+  https://github.com/RandoNandoz: https://github.com
+  github.com/RandoNandoz: github.com
+  https://www.linkedin.com/in/rzhu08/: https://linkedin.com
+  linkedin.com/in/rzhu08: linkedin.com
+  Randy Zhu: John Doe
+
+# Named build variants. Each produces one PDF.
+variants:
+  current:
+    graddate: "April 2028"
+    output: Randy_Zhu_resume
+
+  dec2027:
+    graddate: "December 2027"
+    output: Randy_Zhu_resume_dec2027
+
+  apr2028:
+    graddate: "April 2028"
+    output: Randy_Zhu_resume_apr2028
+
+  anon:
+    graddate: "April 2028"
+    anonymize: true
+    output: Randy_Zhu_resume_anon
