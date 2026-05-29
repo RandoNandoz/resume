@@ -26,6 +26,9 @@
 
 \input{glyphtounicode}
 
+% Graduation date — overridable at build time via build.sh
+\providecommand{\graddate}{April 2028}
+
 
 %----------FONT OPTIONS----------
 % sans-serif
@@ -44,13 +47,6 @@
 \fancyhf{} % clear all header and footer fields
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Add co-op footer image to bottom right
-% \AddToShipoutPictureBG*{%
-%   \put(\LenToUnit{0.61\paperwidth}, \LenToUnit{0.01\paperheight}){%
-%     \includegraphics[width=0.38\textwidth]{co-op footer.jpg}%
-%   }%
-% }
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -118,40 +114,34 @@
 
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
   \textbf{\huge \scshape Randy Zhu} \\ \vspace{1pt}
-  \small 604-704-9500 $|$
-  \href{mailto:randy@randyzhu.com}{\underline{randy@randyzhu.com}} $|$
-  \href{https://randyzhu.com}{\underline{randyzhu.com}} $|$
-  \href{https://github.com/RandoNandoz}{\underline{github.com/RandoNandoz}} $|$
-  \href{https://www.linkedin.com/in/rzhu08/}{\underline{linkedin.com/in/rzhu08}}
+  \small
+  Vancouver, BC $|$
+  \href{mailto:randy@randyzhu.com}{randy@randyzhu.com} $|$
+  \href{https://github.com/RandoNandoz}{github.com/RandoNandoz} $|$
+  \href{https://www.linkedin.com/in/rzhu08/}{linkedin.com/in/rzhu08} $|$
+  Canadian Citizen $\cdot$ Open to Relocation
 \end{center}
 
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
-{University of British Columbia}{April 2028}
-{Bachelor of Science, Computer Science}{GPA: 3.87/4}
+{University of British Columbia}{\graddate}
+{Bachelor of Science, Computer Science, Option in Software Engineering}{GPA: 3.88/4}
 \vspace{-3pt}
-\resumeSubSubheading{Relevant Coursework: Compilers (A+), Programming Languages (A+), Computer Architecture and OS (A-)}{}
+\resumeSubSubheading{Relevant Coursework: Compilers, Programming Languages, Computer Architecture, Operating Systems}{}
 \resumeSubHeadingListEnd
 
-%
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
   \small{\item{
-          \textbf{Languages}{: C, C++, Rust, Python, Swift, Java, C\#, TypeScript, HTML/CSS, SQL, Racket} \\
-          \textbf{Technologies}{: LLVM IR, Linux, POSIX, pthreads, DriverKit, LVGL, React.js} \\
-          \textbf{Cloud}{: AWS (EC2, EBS, ECS), GCP (Cloud Run, Cloud SQL, Cloud Storage, Gemini)} \\
-          \textbf{Tools}{: GDB, Valgrind, perf, CMake, Ghidra, Git, Docker, GitHub Actions}
+          \textbf{Languages}{: C, C++, Python, Rust, TypeScript, Swift, Java, C\#, SQL, Racket} \\
+          \textbf{Technologies}{: LVGL, SDL2, React, Embedded Linux, OpenWRT, LLVM IR, DriverKit, IOKit} \\
+          \textbf{Cloud/Infra}{: AWS (EC2, ECS), GCP (Cloud Run, Cloud SQL, Gemini), Cloudflare (DNS, Pages), Docker, Linux} \\
+          \textbf{Tools/Testing}{: Git, GitHub Actions, CMake, GDB, Valgrind, perf, Ghidra, pytest, Playwright, NUnit, JUnit}
         }}
 \end{itemize}
 
@@ -164,58 +154,47 @@
 {Firmware Engineer Intern}{May 2026 -- Present}
 {Netgear}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Point 1 \\ extra stuff for p1}
-\resumeItem{Point 2 \\ extra stuff p2}
-\resumeItem{Point 3 \\ extra stuff for p3}
-\resumeItem{Point 4}
-\resumeItem{Point 5 \\ extra stuff for p5}
+\resumeItem{Cut firmware RAM and eMMC footprint enough to eliminate a planned memory upgrade on
+  Netgear's flagship Wi-Fi 7 router (\textbf{\textasciitilde\$2M} projected hardware cost avoided)}
+\resumeItem{Decreased runtime RAM usage by 400MB and eMMC usage by 600MB by replacing the WebKit-based LCD UI with a C-based, LVGL UI,
+  freeing memory for additional product features}
+\resumeItem{Accelerated UI development by building a host-side build target that runs the
+  firmware UI on a dev machine via SDL2, mocking the data engine and replacing the
+  on-device fbdev/libinput/evdev backend, eliminating the UI flash-to-hardware test cycle}
+\resumeItem{Introduced clang-format and clang-tidy to the team, standardizing
+  code style and adding static analysis to catch bugs before review}
 \resumeItemListEnd
 
 
 
 \resumeSubheading
 {Research Intern}{May 2025 -- September 2025}
-{Software Practices Lab (UBC)}{Vancouver, BC}
+{Software Practices Lab}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Secured \$6000 grant for full-time research under Dr. Caroline Lemieux (Canada Research Chair)}
-\resumeItem{Authored tool and thesis evaluating automated test carving across 12 popular open-source Python repositories}
-\resumeItem{Implemented control and data flow analyses guided by Gemma 3n for automatic mock generation}
+\resumeItem{Carved fast pytest unit tests from slow end-to-end system tests, reducing runtime on large suites; identified assertion generation as state-based carving's core limit}
+\resumeItem{Built a Python unit test carving tool from scratch using dynamic execution tracing, AST
+  transformations, and serialization to turn system tests into standalone, replayable unit tests}
+\resumeItem{Integrated an LLM (Gemma 3n) as a dependency classifier to auto-generate mocks for creating correct and deterministic unit tests}
 \resumeItemListEnd
 
 \resumeSubheading
 {Software Developer Intern}{September 2024 -- April 2025}
 {Teck Resources}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Saved 100 hours for mine site engineering teams by creating a data ingest tool using the Dataverse API in C\#}
-\resumeItem{Introduced team to Playwright, catching 87\% of bugs before reaching manual testing using Playwright and NUnit}%
-\resumeItem{Developed a calendar component deployed org-wide across all Power Apps teams using React.js, TypeScript, and Fluent UI}
+\resumeItem{Eliminated \textasciitilde100 hours of manual data entry by building a Dataverse-API ingest tool in C\#}
+\resumeItem{Introduced the team to Playwright + NUnit to automate end-to-end testing, \textbf{catching 87\% of bugs before manual QA}}
+\resumeItem{Deployed a React.js-based calendar component across all Power Apps teams, implemented in TypeScript using the Fluent UI toolkit}
 \resumeItemListEnd
 
 \resumeSubheading
 {Teaching Assistant (Introduction to Computer Systems)}{July 2024 -- Present}
 {University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Covered professor's lectures on MIPS assembly, stack frames, and POSIX threading to 200+ students}
-\resumeItem{Achieved 98\% favourable rating (n=102); helped students debug concurrent C code using the pthread library}
+\resumeItem{Awarded the \textbf{Undergraduate TA Award}, selected by a commitee of faculty; achieved a 98\% favourable rating on student experience of instruction surveys (n=102)}
+\resumeItem{Delivered a guest lecture on buffer overflow mitigations (canaries, ASLR, CFI and; covered professor's lectures to 200+ students}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
-
-
-% \section{Volunteer}
-% \resumeSubHeadingListStart
-
-
-% \resumeSubheading
-% {Automation Developer}{September 2023 -- Present}
-% {UBC Agroponics}{Vancouver, BC}
-% \resumeItemListStart
-% \resumeItem{Orchestrated the deployment of farming automation web applications using Docker, accelerating the development lifecycle and improved scalablity.}
-% %\resumeItem{Visualized and stored sensor data transmitted using MQTT into Postgres, ensuring efficent data storage.}
-% %\resumeItem{Delivering 90\% cost savings by transitioning team from paid, proprietary software to free/open-source solutions.}
-% \resumeItem{Debugged Arduino C programs for interfacing with sensors, and taught fellow team members how executables are laid out in memory.}
-% \resumeItemListEnd
-% \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -225,26 +204,29 @@
 \resumeProjectHeading
 {{\textbf{macOS iSCSI Driver}} $|$ \emph{C++, DriverKit, IOKit, Swift}}{November 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Implemented a userspace iSCSI networking client in Swift, working around DriverKit's lack of network access APIs}
-\resumeItem{TBD benchmark data over 10GbE link}
-\resumeItem{Improved performance by designing and using a ring buffer to forward driver SCSI data to user space}
+\resumeItem{Building an open-source macOS iSCSI initiator that mounts remote storage as a local disk, providing
+  a free, auditable alternative to \$249/license proprietary tools}
+\resumeItem{Bridging the Swift userspace networking client to the driver extension over a lock-free
+  shared-memory ring buffer, \textbf{saturating a 10Gb SFP+ NIC}, working around DriverKit's lack of network access}
+\resumeItem{Exposing the remote target as a local block device via the macOS
+  IOUserSCSIParallelInterfaceController interface}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{Racketish Compiler}} $|$ \emph{x86\_64 Assembly, LLVM IR, gdb, Racket}}{January 2026 -- May 2026}
+{{\textbf{Racket Compiler}} $|$ \emph{x86\_64 Assembly, LLVM IR, gdb, Racket}}{January 2026 -- May 2026}
 \resumeItemListStart
-\resumeItem{Reduced compile times 180x (3h $\rightarrow$ 1m) by eliminating a pathological typed/untyped bottleneck in Typed Racket}
+\resumeItem{\textbf{Cut compile times 180x} (3h to 1m) by eliminating a pathological typed/untyped bottleneck in Typed Racket}
 \resumeItem{Replaced x86-only codegen with an LLVM IR backend, enabling compilation to any LLVM-supported platform}
 \resumeItem{Implemented closure conversion, tagged value representation, and tail call optimization via jump conversion}
 
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{\href{https://github.com/kliu04/sasquatch}{\underline{Sasquatch}}}} $|$ \emph{Swift, ARKit, LiDAR, Detectron2, Open3D, Python, FastAPI, PostgreSQL, GCP}}{\href{https://devpost.com/software/sasquatch}{ProduHacks 2026}}
+{{\textbf{\href{https://github.com/kliu04/sasquatch}{\underline{Sasquatch}}}} $|$ \emph{Swift, ARKit, LiDAR, Detectron2, Open3D, Python, FastAPI, PostgreSQL, GCP}}{\href{https://devpost.com/software/sasquatch}{March 2026 (24h Hackathon)}}
 \resumeItemListStart
-\resumeItem{Built an ML pipeline combining Detectron2 instance segmentation and LiDAR point clouds to detect climbing wall holds}
+\resumeItem{Deployed an ML pipeline combining Detectron2 instance segmentation and LiDAR point clouds to detect climbing wall holds}
 \resumeItem{Implemented PCA-based wall orientation detection to project 3D point clouds to 2D for inference}
-\resumeItem{Reduced false positive rate by 98.9\% by adding a Gemini validation pass to filter non-hold wall objects}
+\resumeItem{\textbf{Reduced false positive rate from 90\% to 1\%} by adding a Gemini validation pass to filter non-hold wall objects}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
