@@ -20,7 +20,7 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{eso-pic}
-\usepackage[margin=0.8in]{geometry}
+\usepackage[margin=0.5in]{geometry}
 
 \RequirePackage{fontawesome}
 
@@ -49,11 +49,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -115,7 +115,7 @@
 \begin{document}
 
 \begin{center}
-  \textbf{\huge \scshape Randy Zhu} \\ \vspace{1pt}
+  \textbf{\huge Randy Zhu} \\ \vspace{4pt}
   \small
   Vancouver, BC $|$
   \href{mailto:randy@randyzhu.com}{randy@randyzhu.com} $|$
@@ -131,19 +131,9 @@
 {University of British Columbia}{\graddate}
 {Bachelor of Science, Computer Science, Option in Software Engineering}{GPA: 3.88/4}
 \vspace{-3pt}
-\resumeSubSubheading{Relevant Coursework: Compilers, Programming Languages, Computer Architecture, Operating Systems}{}
+\resumeSubSubheading{Teaching Assistant for Introduction to Computer Systems for 400+ students $\cdot$ Undergraduate TA Award}{}
 \resumeSubHeadingListEnd
 
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \small{\item{
-          \textbf{Languages}{: C, C++, Python, Rust, TypeScript, Swift, Java, C\#, SQL, Racket} \\
-          \textbf{Technologies}{: LVGL, SDL2, React, Embedded Linux, OpenWRT, LLVM IR, DriverKit, IOKit} \\
-          \textbf{Cloud/Infra}{: AWS (EC2, ECS), GCP (Cloud Run, Cloud SQL, Gemini), Cloudflare (DNS, Pages), Docker, Linux} \\
-          \textbf{Tools/Testing}{: Git, GitHub Actions, CMake, GDB, Valgrind, perf, Ghidra, pytest, Playwright, NUnit, JUnit}
-        }}
-\end{itemize}
 
 
 %-----------EXPERIENCE-----------
@@ -154,27 +144,26 @@
 {Firmware Engineer Intern}{May 2026 -- Present}
 {Netgear}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Cut firmware RAM and eMMC footprint enough to eliminate a planned memory upgrade on
+% \resumeItem{Decreased runtime RAM usage by 400MB and eMMC usage by 600MB by replacing the WebKit-based LCD UI with a C-based, LVGL UI,
+%   freeing memory for additional product features}
+\resumeItem{Cut firmware RAM by 400MB and eMMC footprint by 600MB, enough to eliminate a planned memory upgrade on
   Netgear's flagship Wi-Fi 7 router; \textbf{projected 2 million dollar hardware upgrade avoided}}
-\resumeItem{Decreased runtime RAM usage by 400MB and eMMC usage by 600MB by replacing the WebKit-based LCD UI with a C-based, LVGL UI,
-  freeing memory for additional product features}
-\resumeItem{Accelerated UI development by building a host-side build target that runs the
-  firmware UI on a dev machine via SDL2, mocking the data engine and replacing the
-  on-device fbdev/libinput/evdev backend, eliminating the UI flash-to-hardware test cycle}
-\resumeItem{Introduced clang-format and clang-tidy to the team, standardizing
-  code style and adding static analysis to catch bugs before review}
+\resumeItem{Eliminated the need to flash to hardware test cycle for most UI changes with a host-side build target that runs the
+  firmware UI on a dev machine, mocking the backend and replacing the on-device fbdev, libinput and evdev backend with SDL2}
+\resumeItem{Improved crash logs by replacing GCC with clang in the debug UI build, enabling support for AddressSanitizer and other sanitizers for rich
+  memory error and undefined behavior error information}
 \resumeItemListEnd
 
 
 
 \resumeSubheading
 {Research Intern}{May 2025 -- September 2025}
-{Software Practices Lab}{Vancouver, BC}
+{University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Carved fast pytest unit tests from slow end-to-end system tests, reducing runtime on large suites; identified assertion generation as state-based carving's core limit}
-\resumeItem{Built a Python unit test carving tool from scratch using dynamic execution tracing, AST
-  transformations, and serialization to turn system tests into standalone, replayable unit tests}
-\resumeItem{Integrated an LLM (Gemma 3n) as a dependency classifier to auto-generate mocks for creating correct and deterministic unit tests}
+\resumeItem{Achieved a median speedup of 4.97x on large, open-source codebases with long-running integration tests by building a unit test
+  generation tool targeting pytest using Python using dynamic execution tracing, AST transformations, and serialization}
+\resumeItem{Identified correct assertion generation, not execution capture, as the key barrier to automating carving on real test suites}
+\resumeItem{Integrated an LLM as a dependency classifier to auto-generate mocks for creating correct and deterministic unit tests}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -182,16 +171,10 @@
 {Teck Resources}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Eliminated \textasciitilde100 hours of manual data entry by building a Dataverse-API ingest tool in C\#}
-\resumeItem{Introduced the team to Playwright + NUnit to automate end-to-end testing, \textbf{catching 87\% of bugs before manual QA}}
-\resumeItem{Deployed a React.js-based calendar component across all Power Apps teams, implemented in TypeScript using the Fluent UI toolkit}
-\resumeItemListEnd
-
-\resumeSubheading
-{Teaching Assistant (Introduction to Computer Systems)}{July 2024 -- Present}
-{University of British Columbia}{Vancouver, BC}
-\resumeItemListStart
-\resumeItem{Awarded the \textbf{Undergraduate TA Award}, selected by a commitee of faculty; achieved a 98\% favourable rating on student experience of instruction surveys (n=102)}
-\resumeItem{Delivered a guest lecture on buffer overflow mitigations (canaries, ASLR, CFI and; covered professor's lectures to 200+ students}
+\resumeItem{Transformed a malformed SQL Server database with multivalued records stored as CSV strings in single columns into actionable business and safety insights,
+  using T-SQL to parse the columns into separate columns and normalized tables}
+\resumeItem{Introduced the team to Playwright + NUnit to automate end-to-end testing, catching 87\% of bugs before manual QA}
+\resumeItem{Deployed a React.js-based calendar component across all Power Apps teams, implemented in TypeScript}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -207,7 +190,7 @@
 \resumeItem{Building an open-source macOS iSCSI initiator that mounts remote storage as a local disk, providing
   a free, auditable alternative to \$249/license proprietary tools}
 \resumeItem{Bridging the Swift userspace networking client to the driver extension over a lock-free
-  shared-memory ring buffer, \textbf{saturating 2 10Gb SFP+ NICs}, working around DriverKit's lack of network access}
+  shared-memory ring buffer, saturating 2 10Gb SFP+ NICs, working around DriverKit's lack of network access}
 \resumeItem{Exposing the remote target as a local block device via the macOS
   IOUserSCSIParallelInterfaceController interface}
 \resumeItemListEnd
@@ -215,7 +198,7 @@
 \resumeProjectHeading
 {{\textbf{Racket Compiler}} $|$ \emph{x86\_64 Assembly, LLVM IR, gdb, Racket}}{January 2026 -- May 2026}
 \resumeItemListStart
-\resumeItem{\textbf{Cut compile times 180x} (3h to 1m) by eliminating a pathological typed/untyped bottleneck in Typed Racket}
+\resumeItem{Cut compile times 180x (3h to 1m) by eliminating a pathological typed/untyped bottleneck in Typed Racket}
 \resumeItem{Replaced x86-only codegen with an LLVM IR backend, enabling compilation to any LLVM-supported platform}
 \resumeItem{Implemented closure conversion, tagged value representation, and tail call optimization via jump conversion}
 
@@ -229,6 +212,17 @@
 \resumeItem{\textbf{Reduced false positive rate from 90\% to 1\%} by adding a Gemini validation pass to filter non-hold wall objects}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+          \textbf{Languages}{: C, C++, Python, Rust, TypeScript, Swift, Java, C\#, SQL, Racket} \\
+          \textbf{Technologies}{: LVGL, React, Embedded Linux, OpenWRT, LLVM IR, DriverKit, IOKit} \\
+          \textbf{Cloud/Infra}{: AWS (EC2, ECS), GCP (Cloud Run, Cloud SQL, Gemini), Cloudflare (DNS, Pages), Docker, Linux} \\
+          \textbf{Tools/Testing}{: Git, GitHub Actions, CMake, GDB, Ghidra, pytest, Playwright, NUnit, JUnit}
+        }}
+\end{itemize}
 
 %-------------------------------------------
 \end{document}

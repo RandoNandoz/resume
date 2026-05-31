@@ -20,13 +20,13 @@ variants:
     graddate: "April 2028"
     output: Randy_Zhu_resume
 
-  dec2027:
-    graddate: "December 2027"
-    output: Randy_Zhu_resume_dec2027
+  apr2027:
+    graddate: "April 2027"
+    output: Randy_Zhu_resume_fall
 
   apr2028:
     graddate: "April 2028"
-    output: Randy_Zhu_resume_apr2028
+    output: Randy_Zhu_resume_summer
 
   anon:
     graddate: "April 2028"
