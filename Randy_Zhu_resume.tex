@@ -152,6 +152,8 @@
   firmware UI on a dev machine, mocking the backend and replacing the on-device fbdev, libinput and evdev backend with SDL2}
 \resumeItem{Improved crash logs by replacing GCC with clang in the debug UI build, enabling support for AddressSanitizer and other sanitizers for rich
   memory error and undefined behavior error information}
+\resumeItem{Fixed a 2-year-old display tearing bug on device display by tracing it to an unconnected tearing-effect line, then exposing the GPIO in
+  the device tree and gated frame writes on interrupt in the Linux kernel driver}
 \resumeItemListEnd
 
 
