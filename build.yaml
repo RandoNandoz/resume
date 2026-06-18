@@ -13,6 +13,7 @@ redactions:
   https://www.linkedin.com/in/rzhu08/: https://linkedin.com
   linkedin.com/in/rzhu08: linkedin.com
   Randy Zhu: John Doe
+  University of British Columbia: Canadian University
 
 # Named build variants. Each produces one PDF.
 variants:
