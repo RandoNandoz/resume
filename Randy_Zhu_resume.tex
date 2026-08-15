@@ -150,13 +150,10 @@
 {Firmware Developer Intern}{May 2026 -- August 2026}
 {Netgear}{Vancouver, BC}
 \resumeItemListStart
-% \resumeItem{Decreased runtime RAM usage by 400MB and eMMC usage by 600MB by replacing the WebKit-based LCD UI with a C-based, LVGL UI,
-%   freeing memory for additional product features}
-\resumeItem{Cut firmware RAM by 400MB and eMMC footprint by 600MB, enough to eliminate a planned memory upgrade by replacing a legacy WebKit UI with a UI implemented in C and LVGL}
-\resumeItem{Fixed display tearing in Linux kernel driver by tracing an unconnected line on the schematic, exposing it as GPIO in the device tree, and replacing sequential pixel writes with DMA to eliminate scanline races}
-% \resumeItem{Analyzed and fixed a silent, untraceable crash in our firmware in-memory config database implemented in C++ by replacing the custom free list based allocator with a bump allocator}
-\resumeItem{Eliminated the need to flash to hardware test cycle for most UI changes with a host-side build target that runs the
-	firmware UI on a dev machine, mocking the backend and replacing the on-device fbdev, libinput and evdev backend with SDL2}
+\resumeItem{Fixed screen tearing shipped in every product generation since 2012 by writing a new Linux fbdev driver for the ST7789S panel over Qualcomm's EBI2 bus, synchronizing frame DMA to the panel's hardware TE signal}
+\resumeItem{Cut memory usage \textasciitilde400MB and flash \textasciitilde600MB by replacing a WebKitGTK device UI with a native LVGL/C implementation, building the navigation framework, widget library, and 20+ configuration screens}
+\resumeItem{Contributed key press events for every key upstream to LVGL, a widely used open-source embedded graphics library that previously supported only the enter key}
+\resumeItem{Enabled AI agents to develop and verify UI changes without target hardware by writing an SDL2 simulator backend with a mocked device-state layer and screenshot capture}
 \resumeItemListEnd
 
 
