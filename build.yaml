@@ -20,15 +20,6 @@ variants:
   current:
     graddate: "April 2028"
     output: Randy_Zhu_resume
-
-  apr2027:
-    graddate: "April 2027"
-    output: Randy_Zhu_resume_fall
-
-  apr2028:
-    graddate: "April 2028"
-    output: Randy_Zhu_resume_summer
-
   anon:
     graddate: "April 2028"
     anonymize: true
