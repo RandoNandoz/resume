@@ -4,6 +4,7 @@ default: current
 # Plain-string redactions applied to the .tex source when anonymize: true.
 # Longest keys are applied first to avoid partial-overlap collisions.
 redactions:
+  Nexthop AI: "Hot New Networking Startup"
   Netgear: "Small Networking Gadget Co."
   Teck Resources: "Mining Co."
   Software Practices Lab: "University Research Lab"
@@ -18,9 +19,12 @@ redactions:
 # Named build variants. Each produces one PDF.
 variants:
   current:
-    graddate: "April 2028"
+    graddate: "May 2028"
     output: Randy_Zhu_resume
+  future:
+    graddate: "December 2028"
+    output: Randy_Zhu_resume2
   anon:
-    graddate: "April 2028"
+    graddate: "May 2028"
     anonymize: true
     output: Randy_Zhu_resume_anon

@@ -27,7 +27,7 @@
 \input{glyphtounicode}
 
 % Graduation date — overridable at build time via build.sh
-\providecommand{\graddate}{April 2028}
+\providecommand{\graddate}{May 2028}
 
 
 %----------FONT OPTIONS----------
@@ -143,10 +143,12 @@
 
 
 \resumeSubheading
-{Software Engineer Intern, Customer Networks}{August 2026 -- December 2026}
+{Software Engineer Intern}{August 2026 -- December 2026}
 {Nexthop AI}{Bellevue, WA}
 \resumeItemListStart
-\resumeItem{Working on MRC transport and SRv6 segment routing in SONiC to improve model training for hyperscaler AI training clusters}
+\resumeItem{Prototyped a system for a top-three cloud provider that lets low-cost switches replace expensive edge routers, handling \textasciitilde80\% of traffic locally by caching the most-used routes and sending the rest to one shared large router}
+\resumeItem{Adapted gribigo, an open-source Go implementation of gRIBI, to run on SONiC so a central controller can update which routes each switch caches}
+\resumeItem{Automated a customer's SRv6 packet-trimming tests with pytest in sonic-mgmt; unblocked them by fixing a TH6 counter bug in C, traced to a vendor SDK reading the wrong queue}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -167,7 +169,7 @@
 \resumeItemListStart
 \resumeItem{Achieved a median speedup of 4.97x on large, open-source codebases with long-running integration tests by building a unit test
 	generation tool targeting pytest using Python using dynamic execution tracing, AST transformations, and serialization}
-\resumeItem{Identified correct assertion generation, not execution capture, as the key barrier to automating carving on real test suites}
+% \resumeItem{Identified correct assertion generation, not execution capture, as the key barrier to automating carving on real test suites}
 \resumeItem{Integrated an LLM as a dependency classifier to auto-generate mocks for creating correct and deterministic unit tests}
 \resumeItemListEnd
 
@@ -175,10 +177,11 @@
 {Software Developer Intern}{September 2024 -- April 2025}
 {Teck Resources}{Vancouver, BC}
 \resumeItemListStart
-\resumeItem{Eliminated \textasciitilde100 hours of manual data entry by building a Dataverse-API ingest tool in C\#}
-\resumeItem{Transformed a malformed SQL Server database with multivalued records stored as CSV strings in single columns into actionable business and safety insights,
-	using T-SQL to parse the columns into separate columns and normalized tables}
-\resumeItem{Introduced the team to Playwright + NUnit to automate end-to-end testing, catching 87\% of bugs before manual QA}
+\resumeItem{Eliminated \textasciitilde100 hours of manual data entry with a C\# Dataverse-API ingest tool; introduced Playwright + NUnit end-to-end testing that caught 87\% of bugs before manual QA}
+% \resumeItem{Eliminated \textasciitilde100 hours of manual data entry by building a Dataverse-API ingest tool in C\#}
+% \resumeItem{Transformed a malformed SQL Server database with multivalued records stored as CSV strings in single columns into actionable business and safety insights,
+% 	using T-SQL to parse the columns into separate columns and normalized tables}
+% \resumeItem{Introduced the team to Playwright + NUnit to automate end-to-end testing, catching 87\% of bugs before manual QA}
 % \resumeItem{Deployed a React.js-based calendar component across all Power Apps teams, implemented in TypeScript}
 \resumeItemListEnd
 
@@ -196,8 +199,8 @@
 	a free, auditable alternative to \$249/license proprietary tools}
 \resumeItem{Bridging the userspace networking client to the driver extension over a lock-free
 	shared-memory ring buffer, saturating 2 10Gb SFP+ NICs, working around DriverKit's lack of network access}
-\resumeItem{Exposing the remote target as a local block device via the macOS
-	IOUserSCSIParallelInterfaceController interface}
+% \resumeItem{Exposing the remote target as a local block device via the macOS
+% 	IOUserSCSIParallelInterfaceController interface}
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -223,9 +226,8 @@
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
 		      \textbf{Languages}{: C, C++, Java, Python, Racket, TypeScript, C\#, SQL} \\
-		      \textbf{Systems}{: Linux kernel, OpenWrt, LVGL, DriverKit, IOKit, LLVM IR} \\
+		      \textbf{Systems}{: Linux kernel, OpenWrt, LVGL, DriverKit, IOKit, LLVM IR, SONiC} \\
 		      \textbf{Tools}{: Git, GDB, CMake, GitHub Actions, Docker, pytest, JUnit} \\
-		      \textbf{Cloud}{: AWS, GCP, Cloudflare}
 	      }}
 \end{itemize}
 
