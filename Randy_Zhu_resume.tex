@@ -1,10 +1,3 @@
-%-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -20,40 +13,21 @@
 \usepackage{tabularx}
 \usepackage{graphicx}
 \usepackage{eso-pic}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.5in,footskip=5pt]{geometry}
 
 \RequirePackage{fontawesome}
 
 \input{glyphtounicode}
 
-% Graduation date — overridable at build time via build.sh
+% build time override for grad date
 \providecommand{\graddate}{May 2028}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault,light]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-\usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
+\usepackage[default]{sourcesans}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-% \addtolength{\oddsidemargin}{-0.5in}
-% \addtolength{\evensidemargin}{-0.5in}
-% \addtolength{\textwidth}{1in}
-% \addtolength{\topmargin}{-.5in}
-% \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -117,7 +91,7 @@
 \begin{center}
 	\textbf{\huge Randy Zhu} \\ \vspace{4pt}
 	\small
-	Bellevue, WA $|$
+	Vancouver, BC $|$
 	\href{mailto:randy@randyzhu.com}{randy@randyzhu.com} $|$
 	\href{https://github.com/RandoNandoz}{github.com/RandoNandoz} $|$
 	\href{https://www.linkedin.com/in/rzhu08/}{linkedin.com/in/rzhu08} $|$
@@ -129,7 +103,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {University of British Columbia}{\graddate}
-{Bachelor of Science, Computer Science}{GPA: 3.88/4.0}
+{Bachelor of Science, Computer Science, Option in Computer Science}{GPA: 3.88/4.0}
 \vspace{-3pt}
 \resumeSubSubheading{Teaching Assistant for Introduction to Computer Systems for 400+ students; Awarded Undergraduate TA Award}{}
 \resumeSubHeadingListEnd
@@ -140,8 +114,6 @@
 \section{Experience}
 \resumeSubHeadingListStart
 
-
-
 \resumeSubheading
 {Software Engineer Intern}{August 2026 -- December 2026}
 {Nexthop AI}{Bellevue, WA}
@@ -151,8 +123,9 @@
 \resumeItem{Automated a customer's SRv6 packet-trimming tests with pytest in sonic-mgmt; unblocked them by fixing a TH6 counter bug in C, traced to a vendor SDK reading the wrong queue}
 \resumeItemListEnd
 
+
 \resumeSubheading
-{Firmware Developer Intern}{May 2026 -- August 2026}
+{Embedded Software Developer Intern}{May 2026 -- August 2026}
 {Netgear}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Fixed screen tearing shipped in every product generation since 2012 by writing a new Linux graphics driver using the fbdev API for the ST7789S panel over Qualcomm's EBI2 bus, synchronizing frame DMA to the panel's hardware TE signal}
@@ -162,27 +135,21 @@
 \resumeItemListEnd
 
 
-
 \resumeSubheading
 {Research Intern}{May 2025 -- September 2025}
 {University of British Columbia}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Achieved a median speedup of 4.97x on large, open-source codebases with long-running integration tests by building a unit test
 	generation tool targeting pytest using Python using dynamic execution tracing, AST transformations, and serialization}
-% \resumeItem{Identified correct assertion generation, not execution capture, as the key barrier to automating carving on real test suites}
 \resumeItem{Integrated an LLM as a dependency classifier to auto-generate mocks for creating correct and deterministic unit tests}
 \resumeItemListEnd
+
 
 \resumeSubheading
 {Software Developer Intern}{September 2024 -- April 2025}
 {Teck Resources}{Vancouver, BC}
 \resumeItemListStart
 \resumeItem{Eliminated \textasciitilde100 hours of manual data entry with a C\# Dataverse-API ingest tool; introduced Playwright + NUnit end-to-end testing that caught 87\% of bugs before manual QA}
-% \resumeItem{Eliminated \textasciitilde100 hours of manual data entry by building a Dataverse-API ingest tool in C\#}
-% \resumeItem{Transformed a malformed SQL Server database with multivalued records stored as CSV strings in single columns into actionable business and safety insights,
-% 	using T-SQL to parse the columns into separate columns and normalized tables}
-% \resumeItem{Introduced the team to Playwright + NUnit to automate end-to-end testing, catching 87\% of bugs before manual QA}
-% \resumeItem{Deployed a React.js-based calendar component across all Power Apps teams, implemented in TypeScript}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -199,21 +166,17 @@
 	a free, auditable alternative to \$249/license proprietary tools}
 \resumeItem{Bridging the userspace networking client to the driver extension over a lock-free
 	shared-memory ring buffer, saturating 2 10Gb SFP+ NICs, working around DriverKit's lack of network access}
-% \resumeItem{Exposing the remote target as a local block device via the macOS
-% 	IOUserSCSIParallelInterfaceController interface}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{\href{https://git.randyzhu.com/randyzhu/racketish-compiler}{\underline{Racket Compiler}}}} $|$ \emph{x86\_64 Assembly, LLVM IR, gdb, Racket}}{January 2026 -- May 2026}
+{{\textbf{Racket Compiler}} $|$ \emph{x86\_64 Assembly, LLVM IR, gdb, Racket}}{January 2026 -- May 2026}
 \resumeItemListStart
 \resumeItem{Cut compile times 180x (3h to 1m) by eliminating a pathological typed/untyped bottleneck in Typed Racket}
 \resumeItem{Replaced x86-only codegen with an LLVM IR backend, enabling compilation to any LLVM-supported platform}
-% \resumeItem{Implemented closure conversion, tagged value representation, and tail call optimization via jump conversion}
-
 \resumeItemListEnd
 
 \resumeProjectHeading
-{{\textbf{\href{https://git.randyzhu.com/randyzhu/sasquatch}{\underline{Sasquatch}}}} $|$ \emph{Swift, ARKit, LiDAR, Detectron2, Open3D, Python, FastAPI, PostgreSQL, GCP}}{March 2026 (24h Hackathon)}
+{{\textbf{Sasquatch}} $|$ \emph{Swift, ARKit, LiDAR, Detectron2, Open3D, Python, FastAPI, PostgreSQL, GCP}}{March 2026 (24h Hackathon)}
 \resumeItemListStart
 \resumeItem{Deployed an ML pipeline combining Detectron2 instance segmentation and LiDAR point clouds to detect climbing wall holds}
 \resumeItem{Implemented PCA-based wall orientation detection to project 3D point clouds to 2D for inference}

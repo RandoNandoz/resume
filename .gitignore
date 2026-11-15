@@ -307,3 +307,5 @@ TSWLatexianTemp*
 
 # build tool intermediate files
 .build/
+
+.venv/

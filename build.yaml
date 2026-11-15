@@ -21,9 +21,6 @@ variants:
   current:
     graddate: "May 2028"
     output: Randy_Zhu_resume
-  future:
-    graddate: "December 2028"
-    output: Randy_Zhu_resume2
   anon:
     graddate: "May 2028"
     anonymize: true
